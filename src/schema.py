@@ -4,5 +4,7 @@ from pydantic import BaseModel
 class Message(BaseModel):
     message: str
 
-class Categories(BaseModel):
-    categories: dict
+class CollectDataResponse(BaseModel):
+    status: str
+    total_inserted: int
+    categories: list 
