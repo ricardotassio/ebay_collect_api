@@ -7,7 +7,7 @@ from ebaysdk.finding import Connection as Finding
 from src.config.db import get_collection
 from src.config.settings import API_KEY
 
-# Access the MongoDB collection
+
 collection = get_collection()
 
 logging.basicConfig(level=logging.INFO)

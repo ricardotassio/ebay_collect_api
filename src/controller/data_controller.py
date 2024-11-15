@@ -1,5 +1,7 @@
 from fastapi import APIRouter, HTTPException
 
+from src.schema import Categories
+
 from src.service.data_service import (
     christmas_categories,
     get_all_christmas_data,
@@ -14,7 +16,7 @@ async def get_categories():
     return christmas_categories
 
 
-@router.get('/collect-data')
+@router.get('/collect-data', response_model=Categories)
 async def fetch_data():
     result = get_all_christmas_data()
     if result['status'] == 'error':
