@@ -16,7 +16,7 @@ async def get_categories():
     return christmas_categories
 
 
-@router.get('/collect-data', response_model=CollectDataResponse)
+@router.get('/collect-data')
 async def fetch_data():
     result = get_all_christmas_data()
     if result['status'] == 'error':
